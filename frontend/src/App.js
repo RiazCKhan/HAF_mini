@@ -1,8 +1,14 @@
+import Leftbar from "./components/Leftbar";
+import NavBar from "./components/NavBar";
+import Rightbar from "./components/Rightbar";
 
 function App() {
   return (
     <div>
-      HAF MINI
+      <NavBar />
+      <Leftbar />
+      <Main />
+      <Rightbar />
     </div>
   );
 }
