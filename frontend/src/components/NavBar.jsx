@@ -1,17 +1,9 @@
-import {
-  AppBar,
-  Avatar,
-  Badge,
-  Box,
-  Menu,
-  MenuItem,
-  Toolbar,
-  Typography,
-} from "@mui/material";
+import { AppBar, Avatar, Badge, Box, Toolbar, Typography } from "@mui/material";
 import { IconBar, IconBarMobile } from "../themes/NavBarTheme";
 import ChairIcon from "@mui/icons-material/Chair";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import SettingsIcon from "@mui/icons-material/Settings";
 import avatarImg from "../static/avatarDog.jpeg";
 
 const NavBar = () => {
@@ -36,30 +28,13 @@ const NavBar = () => {
             <NotificationsIcon />
           </Badge>
           <Avatar src={avatarImg} />
+          <SettingsIcon />
         </IconBar>
         <IconBarMobile>
           <Typography>Basil</Typography>
           <Avatar src={avatarImg} />
         </IconBarMobile>
       </Toolbar>
-      <Menu
-        id="demo-positioned-menu"
-        aria-labelledby="demo-positioned-button"
-        open={true}
-        onClose={false}
-        anchorOrigin={{
-          vertical: "top",
-          horizontal: "right",
-        }}
-        transformOrigin={{
-          vertical: "top",
-          horizontal: "left",
-        }}
-      >
-        <MenuItem>Profile</MenuItem>
-        <MenuItem>Admin</MenuItem>
-        <MenuItem>Logout</MenuItem>
-      </Menu>
     </AppBar>
   );
 };
