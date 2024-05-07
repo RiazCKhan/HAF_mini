@@ -3,14 +3,18 @@ import Leftbar from "./components/Leftbar";
 import Main from "./components/Main";
 import Rightbar from "./components/Rightbar";
 
+import { Box, Stack } from "@mui/material";
+
 function App() {
   return (
-    <div>
+    <Box>
       <NavBar />
-      <Leftbar />
-      <Main />
-      <Rightbar />
-    </div>
+      <Stack sx={{ flexDirection: "row", gap: 2, justifyContent: "space-between" }}>
+        <Leftbar />
+        <Main />
+        <Rightbar />
+      </Stack>
+    </Box>
   );
 }
 

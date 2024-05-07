@@ -1,5 +1,7 @@
+import { Box } from "@mui/material";
+
 const Rightbar = () => {
-  return <div>RightBar</div>;
+  return <Box>RightBar</Box>;
 };
 
 export default Rightbar;

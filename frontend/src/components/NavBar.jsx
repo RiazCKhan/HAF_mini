@@ -1,5 +1,7 @@
+import { Box } from "@mui/material";
+
 const NavBar = () => {
-  return <div>NavBar</div>;
+  return <Box>NavBar</Box>;
 };
 
 export default NavBar;
