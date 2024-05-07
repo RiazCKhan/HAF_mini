@@ -10,14 +10,22 @@ import {
 import ChairIcon from "@mui/icons-material/Chair";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import SettingsIcon from "@mui/icons-material/Settings";
-import avatar from "../static/avatarDog.jpeg";
+import avatarImg from "../static/avatarDog.jpeg";
 
 const IconBar = styled(Box)(({ theme }) => ({
+  display: "none",
+  alignItems: "center",
+  gap: "1.25rem",
+  padding: "0 0.625rem",
+  [theme.breakpoints.up("sm")]: { display: "flex" },
+}));
+
+const IconBarMobile = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   gap: "1.25rem",
   padding: "0 0.625rem",
+  [theme.breakpoints.up("sm")]: { display: "none" },
 }));
 
 const NavBar = () => {
@@ -41,8 +49,12 @@ const NavBar = () => {
           <Badge color="secondary" badgeContent={0} showZero>
             <NotificationsIcon />
           </Badge>
-          <Avatar src={avatar} />
+          <Avatar src={avatarImg} />
         </IconBar>
+        <IconBarMobile>
+          <Typography>Basil</Typography>
+          <Avatar src={avatarImg} />
+        </IconBarMobile>
       </Toolbar>
     </AppBar>
   );
