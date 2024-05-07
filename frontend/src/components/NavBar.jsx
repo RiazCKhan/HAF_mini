@@ -41,6 +41,7 @@ const NavBar = () => {
         <IconBarMobile>
           <Typography>Basil</Typography>
           <Avatar src={avatarImg} />
+          <SettingsIcon />
         </IconBarMobile>
       </Toolbar>
     </AppBar>
