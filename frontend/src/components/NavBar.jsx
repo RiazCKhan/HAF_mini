@@ -22,10 +22,18 @@ const NavBar = () => {
         <ChairIcon sx={{ display: { xs: "block", sm: "none" } }} />
         <IconBar>
           <Badge color="secondary" badgeContent={0} showZero>
-            <MailIcon />
+            <MailIcon
+              onClick={(event) => {
+                console.log("Mail");
+              }}
+            />
           </Badge>
           <Badge color="secondary" badgeContent={0} showZero>
-            <NotificationsIcon />
+            <NotificationsIcon
+              onClick={(event) => {
+                console.log("Notification");
+              }}
+            />
           </Badge>
           <Avatar src={avatarImg} />
           <SettingsIcon />
