@@ -3,7 +3,14 @@ import LeftbarItem from "./LeftbarItem";
 import { LeftbarStatic } from "../static/LeftbarStatic";
 
 const leftBarProps = LeftbarStatic.map((item) => {
-  return <LeftbarItem key={item.id} title={item.title} icon={item.icon} />;
+  return (
+    <LeftbarItem
+      key={item.id}
+      title={item.title}
+      icon={item.icon}
+      link={item.link}
+    />
+  );
 });
 
 const Leftbar = () => {
