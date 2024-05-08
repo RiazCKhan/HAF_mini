@@ -4,7 +4,7 @@ import HandshakeIcon from "@mui/icons-material/Handshake";
 import HealthAndSafetyIcon from "@mui/icons-material/HealthAndSafety";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 
-export const LeftbarStatic = [
+export const LeftBarStatic = [
   {
     id: 1,
     title: "Agent",

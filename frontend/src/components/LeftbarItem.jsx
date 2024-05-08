@@ -7,7 +7,7 @@ import {
 
 import { Link } from "react-router-dom";
 
-const LeftbarItem = (props) => {
+const LeftBarItem = (props) => {
   const { title, icon, link } = props;
 
   return (
@@ -22,4 +22,4 @@ const LeftbarItem = (props) => {
   );
 };
 
-export default LeftbarItem;
+export default LeftBarItem;
