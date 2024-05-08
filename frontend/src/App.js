@@ -1,7 +1,7 @@
 import NavBar from "./components/NavBar";
-import Leftbar from "./components/Leftbar";
+import LeftBar from "./components/LeftBar";
 import Main from "./components/Main";
-import Rightbar from "./components/Rightbar";
+import RightBar from "./components/RightBar";
 
 import { Box, Stack } from "@mui/material";
 
@@ -10,9 +10,9 @@ function App() {
     <Box>
       <NavBar />
       <Stack sx={{ flexDirection: "row", gap: 2, justifyContent: "space-between" }}>
-        <Leftbar />
+        <LeftBar />
         <Main />
-        <Rightbar />
+        <RightBar />
       </Stack>
     </Box>
   );
