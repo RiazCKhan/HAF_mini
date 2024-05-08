@@ -5,16 +5,20 @@ import {
   ListItemText,
 } from "@mui/material";
 
+import { Link } from "react-router-dom";
+
 const LeftbarItem = (props) => {
-  const { title, icon } = props;
+  const { title, icon, link } = props;
 
   return (
-    <ListItem disablePadding>
-      <ListItemButton>
-        <ListItemIcon>{icon}</ListItemIcon>
-        <ListItemText primary={title} />
-      </ListItemButton>
-    </ListItem>
+    <Link to={link} style={{ color: "black", textDecoration: "none" }}>
+      <ListItem disablePadding>
+        <ListItemButton>
+          <ListItemIcon>{icon}</ListItemIcon>
+          <ListItemText primary={title} />
+        </ListItemButton>
+      </ListItem>
+    </Link>
   );
 };
 

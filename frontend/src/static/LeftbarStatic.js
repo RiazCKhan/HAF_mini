@@ -8,26 +8,31 @@ export const LeftbarStatic = [
   {
     id: 1,
     title: "Agent",
-    icon: <SupportAgentIcon />
+    icon: <SupportAgentIcon />,
+    link: "/agents"
   },
   {
     id: 2,
     title: "Client",
-    icon: < Diversity3Icon />
+    icon: < Diversity3Icon />,
+    link: "/clients"
   },
   {
     id: 3,
     title: "Donor",
-    icon: <HandshakeIcon />
+    icon: <HandshakeIcon />,
+    link: "/donors"
   },
   {
     id: 4,
     title: "Donation",
-    icon: <HealthAndSafetyIcon />
+    icon: <HealthAndSafetyIcon />,
+    link: "/donations"
   },
   {
     id: 5,
     title: "Delivery",
-    icon: <LocalShippingIcon />
+    icon: <LocalShippingIcon />,
+    link: "/deliveries"
   }
 ]
