@@ -1,8 +1,8 @@
 import NavBar from "../components/NavBar";
 import LeftBar from "../components/LeftBar";
-import Main from "../components/Main";
 import RightBar from "../components/RightBar";
 
+import { Outlet } from "react-router-dom";
 import { Box, Stack } from "@mui/material";
 
 const Homepage = () => {
@@ -13,7 +13,7 @@ const Homepage = () => {
         sx={{ flexDirection: "row", gap: 2, justifyContent: "space-between" }}
       >
         <LeftBar />
-        <Main />
+        <Outlet />
         <RightBar />
       </Stack>
     </Box>
