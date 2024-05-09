@@ -1,10 +1,10 @@
 import { AppBar, Avatar, Badge, Box, Toolbar, Typography } from "@mui/material";
-import { IconBar, IconBarMobile } from "../themes/NavBarTheme";
+import { IconBar, IconBarMobile } from "../../themes/NavBarTheme";
 import ChairIcon from "@mui/icons-material/Chair";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import SettingsIcon from "@mui/icons-material/Settings";
-import avatarImg from "../static/avatarDog.jpeg";
+import avatarImg from "../../static/avatarDog.jpeg";
 
 const NavBar = () => {
   return (

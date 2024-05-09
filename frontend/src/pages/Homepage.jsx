@@ -1,6 +1,6 @@
-import NavBar from "../components/NavBar";
-import LeftBar from "../components/LeftBar";
-import RightBar from "../components/RightBar";
+import NavBar from "../components/navbars/NavBar";
+import LeftBar from "../components/navbars/LeftBar";
+import RightBar from "../components/navbars/RightBar";
 
 import { Outlet } from "react-router-dom";
 import { Box, Stack } from "@mui/material";

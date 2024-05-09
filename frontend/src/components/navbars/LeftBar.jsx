@@ -1,6 +1,6 @@
 import { Box, List } from "@mui/material";
 import LeftBarItem from "./LeftBarItem";
-import { LeftBarStatic } from "../static/LeftBarStatic";
+import { LeftBarStatic } from "../../static/LeftBarStatic";
 
 const leftBarProps = LeftBarStatic.map((item) => {
   return (
