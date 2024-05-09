@@ -21,6 +21,24 @@ export const AgencyFields = [
   },
 ];
 
+export const ReferralFields = [
+  {
+    id: "client",
+    field: "Client",
+    type: "text"
+  },
+  {
+    id: "agent",
+    field: "Agent",
+    type: "text"
+  },
+  {
+    id: "status",
+    field: "Status",
+    type: "text"
+  },
+];
+
 export const ClientFields = [
   {
     id: "name",

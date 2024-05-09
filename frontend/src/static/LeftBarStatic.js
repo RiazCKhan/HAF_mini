@@ -3,6 +3,7 @@ import Diversity3Icon from "@mui/icons-material/Diversity3";
 import HandshakeIcon from "@mui/icons-material/Handshake";
 import HealthAndSafetyIcon from "@mui/icons-material/HealthAndSafety";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 
 export const LeftBarStatic = [
   {
@@ -10,6 +11,12 @@ export const LeftBarStatic = [
     title: "Agent",
     icon: <SupportAgentIcon />,
     link: "/agents"
+  },
+  {
+    id: "referral",
+    title: "Referral",
+    icon: <HealthAndSafetyIcon />,
+    link: "/referrals"
   },
   {
     id: "client",
@@ -26,7 +33,7 @@ export const LeftBarStatic = [
   {
     id: "donation",
     title: "Donation",
-    icon: <HealthAndSafetyIcon />,
+    icon: <VolunteerActivismIcon />,
     link: "/donations"
   },
   {
