@@ -6,31 +6,31 @@ import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 
 export const LeftBarStatic = [
   {
-    id: 1,
+    id: "agent",
     title: "Agent",
     icon: <SupportAgentIcon />,
     link: "/agents"
   },
   {
-    id: 2,
+    id: "client",
     title: "Client",
     icon: < Diversity3Icon />,
     link: "/clients"
   },
   {
-    id: 3,
+    id: "donor",
     title: "Donor",
     icon: <HandshakeIcon />,
     link: "/donors"
   },
   {
-    id: 4,
+    id: "donation",
     title: "Donation",
     icon: <HealthAndSafetyIcon />,
     link: "/donations"
   },
   {
-    id: 5,
+    id: "delivery",
     title: "Delivery",
     icon: <LocalShippingIcon />,
     link: "/deliveries"
