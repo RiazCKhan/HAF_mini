@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Paper,
   Stack,
   Table,
@@ -10,6 +11,8 @@ import {
   TableRow,
   Typography,
 } from "@mui/material";
+import AddIcon from "@mui/icons-material/Add";
+import SendIcon from "@mui/icons-material/Send";
 
 import CreateModal from "../CreateModal";
 import { ReferralFields } from "../../static/TableFormFields";
@@ -43,11 +46,13 @@ const AgentTable = () => {
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
               <TableRow>
-                <TableCell>Name</TableCell>
-                <TableCell align="right">Agency</TableCell>
-                <TableCell align="right">Email</TableCell>
-                <TableCell align="right">Phone Number</TableCell>
-                <TableCell align="right">Status</TableCell>
+                <TableCell>Client Name</TableCell>
+                <TableCell align="center">Agency</TableCell>
+                <TableCell align="center">Email</TableCell>
+                <TableCell align="center">Phone Number</TableCell>
+                <TableCell align="center">Status</TableCell>
+                <TableCell align="center">Items</TableCell>
+                <TableCell align="right">Request</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -59,10 +64,20 @@ const AgentTable = () => {
                   <TableCell component="th" scope="row">
                     {row.name}
                   </TableCell>
-                  <TableCell align="right">{row.calories}</TableCell>
-                  <TableCell align="right">{row.fat}</TableCell>
-                  <TableCell align="right">{row.carbs}</TableCell>
-                  <TableCell align="right">{row.protein}</TableCell>
+                  <TableCell align="center">{row.calories}</TableCell>
+                  <TableCell align="center">{row.fat}</TableCell>
+                  <TableCell align="center">{row.carbs}</TableCell>
+                  <TableCell align="center">{row.protein}</TableCell>
+                  <TableCell align="center">
+                    <Button size="small">
+                      <AddIcon size="small" />
+                    </Button>
+                  </TableCell>
+                  <TableCell align="right">
+                    <Button size="small">
+                      <SendIcon size="small" />
+                    </Button>
+                  </TableCell>
                 </TableRow>
               ))}
             </TableBody>
