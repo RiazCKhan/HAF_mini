@@ -11,7 +11,7 @@ import {
   Typography,
 } from "@mui/material";
 
-import CreateModal from "../CreateModal";
+import CreateModal from "../modals/CreateModal";
 import { ClientFields } from "../../static/TableFormFields";
 
 function createData(name, calories, fat, carbs, protein) {

@@ -14,7 +14,7 @@ import {
 import AddIcon from "@mui/icons-material/Add";
 import SendIcon from "@mui/icons-material/Send";
 
-import CreateModal from "../CreateModal";
+import CreateModal from "../modals/CreateModal";
 import { ReferralFields } from "../../static/TableFormFields";
 
 function createData(name, calories, fat, carbs, protein) {
