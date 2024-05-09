@@ -11,10 +11,10 @@ import {
   TableRow,
   Typography,
 } from "@mui/material";
-import AddIcon from "@mui/icons-material/Add";
 import SendIcon from "@mui/icons-material/Send";
 
 import CreateModal from "../modals/CreateModal";
+import ItemModal from "../modals/ItemModal";
 import { ReferralFields } from "../../static/TableFormFields";
 
 function createData(name, calories, fat, carbs, protein) {
@@ -69,9 +69,7 @@ const AgentTable = () => {
                   <TableCell align="center">{row.carbs}</TableCell>
                   <TableCell align="center">{row.protein}</TableCell>
                   <TableCell align="center">
-                    <Button size="small">
-                      <AddIcon size="small" />
-                    </Button>
+                    <ItemModal tablename={"potot"} fields={ReferralFields} />
                   </TableCell>
                   <TableCell align="right">
                     <Button size="small">
