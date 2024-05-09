@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 
 import CreateModal from "../CreateModal";
-import { DonorFields } from "../../static/TableFormFields";
+import { ReferralFields } from "../../static/TableFormFields";
 
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
@@ -26,7 +26,7 @@ const rows = [
   createData("Gingerbread", 356, 16.0, 49, 3.9),
 ];
 
-const DonorTable = () => {
+const AgentTable = () => {
   return (
     <Box sx={{ flex: 4, p: 2 }}>
       <Box sx={{ padding: "1rem" }}>
@@ -35,16 +35,16 @@ const DonorTable = () => {
             variant="h6"
             sx={{ margin: "0 0.5rem", fontWeight: "300" }}
           >
-            Donors
+            Referrals
           </Typography>
-          <CreateModal tablename={"Donor"} fields={DonorFields} />
+          <CreateModal tablename={"Referral"} fields={ReferralFields} />
         </Stack>
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
               <TableRow>
                 <TableCell>Name</TableCell>
-                <TableCell align="right">Foundation</TableCell>
+                <TableCell align="right">Agency</TableCell>
                 <TableCell align="right">Email</TableCell>
                 <TableCell align="right">Phone Number</TableCell>
                 <TableCell align="right">Status</TableCell>
@@ -73,4 +73,4 @@ const DonorTable = () => {
   );
 };
 
-export default DonorTable;
+export default AgentTable;

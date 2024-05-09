@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Homepage from './pages/Homepage';
 import NotFound from './pages/NotFound'
 import AgentTable from './components/tables/AgentTable'
+import ReferralTable from './components/tables/ReferralTable'
 import ClientTable from './components/tables/ClientTable'
 import DeliveryTable from './components/tables/DeliveryTable'
 import DonationTable from './components/tables/DonationTable'
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: '/agents',
         element: <AgentTable />
+      },
+      {
+        path: '/referrals',
+        element: <ReferralTable />
       },
       {
         path: '/clients',

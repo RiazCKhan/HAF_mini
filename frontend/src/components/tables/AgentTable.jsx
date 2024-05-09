@@ -1,6 +1,7 @@
 import {
   Box,
   Paper,
+  Stack,
   Table,
   TableBody,
   TableCell,
@@ -9,6 +10,9 @@ import {
   TableRow,
   Typography,
 } from "@mui/material";
+
+import CreateModal from "../CreateModal";
+import { AgencyFields } from "../../static/TableFormFields";
 
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
@@ -26,18 +30,24 @@ const AgentTable = () => {
   return (
     <Box sx={{ flex: 4, p: 2 }}>
       <Box sx={{ padding: "1rem" }}>
-        <Typography variant="h6" sx={{ margin: "0 0.5rem", fontWeight: "300" }}>
-          Agents
-        </Typography>
+        <Stack sx={{ flexDirection: "row", justifyContent: "space-between" }}>
+          <Typography
+            variant="h6"
+            sx={{ margin: "0 0.5rem", fontWeight: "300" }}
+          >
+            Agents
+          </Typography>
+          <CreateModal tablename={"Agent"} fields={AgencyFields} />
+        </Stack>
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
               <TableRow>
-                <TableCell>Dessert (100g serving)</TableCell>
-                <TableCell align="right">Calories</TableCell>
-                <TableCell align="right">Fat&nbsp;(g)</TableCell>
-                <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-                <TableCell align="right">Protein&nbsp;(g)</TableCell>
+                <TableCell>Name</TableCell>
+                <TableCell align="right">Agency</TableCell>
+                <TableCell align="right">Email</TableCell>
+                <TableCell align="right">Phone Number</TableCell>
+                <TableCell align="right">Status</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
