@@ -1,3 +1,7 @@
 from django.db import models
 
-# Create your models here.
+class Agent(models.Model):
+  name = models.CharField()
+  email = models.CharField()
+  phone_number = models.CharField
+  status = models.BooleanField

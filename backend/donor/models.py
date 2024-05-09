@@ -1,3 +1,7 @@
 from django.db import models
 
-# Create your models here.
+class Donor(models.Model):
+  full_name = models.CharField()
+  foundation = models.CharField()
+  email = models.CharField()
+  phone_number = models.CharField()
