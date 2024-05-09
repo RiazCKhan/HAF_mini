@@ -1,4 +1,4 @@
 from django.db import models
 
-class Delivery(models.Model):
+class Donation(models.Model):
   pass
