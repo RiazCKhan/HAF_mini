@@ -30,7 +30,7 @@ const AgentTable = () => {
   return (
     <Box sx={{ flex: 4, p: 2 }}>
       <Box sx={{ padding: "1rem" }}>
-        <Stack>
+        <Stack sx={{ flexDirection: "row", justifyContent: "space-between" }}>
           <Typography
             variant="h6"
             sx={{ margin: "0 0.5rem", fontWeight: "300" }}
