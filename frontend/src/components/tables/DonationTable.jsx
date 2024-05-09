@@ -1,6 +1,7 @@
 import {
   Box,
   Paper,
+  Stack,
   Table,
   TableBody,
   TableCell,
@@ -9,6 +10,9 @@ import {
   TableRow,
   Typography,
 } from "@mui/material";
+
+import CreateModal from "../CreateModal";
+import { DonationFields } from "../../static/TableFormFields";
 
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
@@ -26,9 +30,15 @@ const DonationTable = () => {
   return (
     <Box sx={{ flex: 4, p: 2 }}>
       <Box sx={{ padding: "1rem" }}>
-        <Typography variant="h6" sx={{ margin: "0 0.5rem", fontWeight: "300" }}>
-          Donations
-        </Typography>
+        <Stack sx={{ flexDirection: "row", justifyContent: "space-between" }}>
+          <Typography
+            variant="h6"
+            sx={{ margin: "0 0.5rem", fontWeight: "300" }}
+          >
+            Donations
+          </Typography>
+          <CreateModal tablename={"Donation"} fields={DonationFields} />
+        </Stack>
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>

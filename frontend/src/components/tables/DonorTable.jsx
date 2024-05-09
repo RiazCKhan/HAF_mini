@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   Paper,
   Stack,
   Table,
@@ -12,7 +11,8 @@ import {
   Typography,
 } from "@mui/material";
 
-import AddIcon from "@mui/icons-material/Add";
+import CreateModal from "../CreateModal";
+import { DonorFields } from "../../static/TableFormFields";
 
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
@@ -37,10 +37,7 @@ const DonorTable = () => {
           >
             Donors
           </Typography>
-          <Button variant="text" size="small" sx={{ padding: "0.5rem" }}>
-            <AddIcon />
-            New Donor
-          </Button>
+          <CreateModal tablename={"Donor"} fields={DonorFields} />
         </Stack>
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: 650 }} aria-label="simple table">

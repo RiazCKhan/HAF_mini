@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 
 import CreateModal from "../CreateModal";
-import { AgencyFields } from "../../static/AgencyFormFields";
+import { AgencyFields } from "../../static/TableFormFields";
 
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
