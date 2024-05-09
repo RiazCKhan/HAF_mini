@@ -43,11 +43,11 @@ const DonorTable = () => {
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
               <TableRow>
-                <TableCell>Name</TableCell>
-                <TableCell align="right">Foundation</TableCell>
-                <TableCell align="right">Email</TableCell>
-                <TableCell align="right">Phone Number</TableCell>
-                <TableCell align="right">Status</TableCell>
+                <TableCell>Donor Name</TableCell>
+                <TableCell align="center">Foundation</TableCell>
+                <TableCell align="center">Email</TableCell>
+                <TableCell align="center">Phone Number</TableCell>
+                <TableCell align="center">Status</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -59,10 +59,10 @@ const DonorTable = () => {
                   <TableCell component="th" scope="row">
                     {row.name}
                   </TableCell>
-                  <TableCell align="right">{row.calories}</TableCell>
-                  <TableCell align="right">{row.fat}</TableCell>
-                  <TableCell align="right">{row.carbs}</TableCell>
-                  <TableCell align="right">{row.protein}</TableCell>
+                  <TableCell align="center">{row.calories}</TableCell>
+                  <TableCell align="center">{row.fat}</TableCell>
+                  <TableCell align="center">{row.carbs}</TableCell>
+                  <TableCell align="center">{row.protein}</TableCell>
                 </TableRow>
               ))}
             </TableBody>

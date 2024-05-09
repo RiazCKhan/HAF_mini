@@ -43,11 +43,10 @@ const DeliveryTable = () => {
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
               <TableRow>
-                <TableCell>Dessert (100g serving)</TableCell>
-                <TableCell align="right">Calories</TableCell>
-                <TableCell align="right">Fat&nbsp;(g)</TableCell>
-                <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-                <TableCell align="right">Protein&nbsp;(g)</TableCell>
+                <TableCell>Delivery ID</TableCell>
+                <TableCell align="center">Client ID</TableCell>
+                <TableCell align="center">Referral ID</TableCell>
+                <TableCell align="center">Status(g)</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -59,10 +58,10 @@ const DeliveryTable = () => {
                   <TableCell component="th" scope="row">
                     {row.name}
                   </TableCell>
-                  <TableCell align="right">{row.calories}</TableCell>
-                  <TableCell align="right">{row.fat}</TableCell>
-                  <TableCell align="right">{row.carbs}</TableCell>
-                  <TableCell align="right">{row.protein}</TableCell>
+                  <TableCell align="center">{row.calories}</TableCell>
+                  <TableCell align="center">{row.fat}</TableCell>
+                  <TableCell align="center">{row.carbs}</TableCell>
+                  <TableCell align="center">{row.protein}</TableCell>
                 </TableRow>
               ))}
             </TableBody>
