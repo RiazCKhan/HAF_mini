@@ -1,19 +1,45 @@
-import { Box, Button, Modal, TextField, styled } from "@mui/material";
+import { Box, Button, Modal, Stack, TextField, styled } from "@mui/material";
 import { useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 
+const faker = [
+  {
+    id: 1,
+    itemName: "Item",
+    quantity: "Quantity",
+  },
+  {
+    id: 2,
+    itemName: "Item",
+    quantity: "Quantity",
+  },
+  {
+    idd: 3,
+    itemName: "Item",
+    quantity: "Quantity",
+  },
+];
+
 const CreateModal = (props) => {
-  const [openCreateModal, setOpenCreateModal] = useState(false);
+  const [openItemModal, setOpenItemModal] = useState(false);
 
-  const { tablename, fields } = props;
-
-  const modalFormFields = fields.map((field) => {
+  const dummyData = faker.map((item) => {
     return (
-      <TextField
-        id="outlined-password-input"
-        label={field.field}
-        type={field.type}
-      />
+      <Stack direction="row" spacing={2}>
+        <TextField
+          id="outlined-password-input"
+          label={item.itemName}
+          type="text"
+        />
+        <TextField
+          id="outlined-password-input"
+          label={item.quantity}
+          type="number"
+        />
+        <Button size="small">
+          <AddIcon />
+        </Button>
+      </Stack>
     );
   });
 
@@ -25,13 +51,12 @@ const CreateModal = (props) => {
 
   return (
     <Box>
-      <Button onClick={(event) => setOpenCreateModal(true)}>
+      <Button onClick={(event) => setOpenItemModal(true)}>
         <AddIcon />
-        New {tablename}
       </Button>
       <MyStyleModal
-        open={openCreateModal}
-        onClose={(event) => setOpenCreateModal(false)}
+        open={openItemModal}
+        onClose={(event) => setOpenItemModal(false)}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
@@ -53,7 +78,7 @@ const CreateModal = (props) => {
             noValidate
             autoComplete="off"
           >
-            <div>{modalFormFields}</div>
+            <div>{dummyData}</div>
           </Box>
           <Box sx={{ display: "flex", justifyContent: "end", p: 1 }}>
             <Button variant="contained">Submit</Button>
