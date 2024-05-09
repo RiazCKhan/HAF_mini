@@ -5,7 +5,6 @@ class Agent(models.Model):
   agency = models.CharField(max_length=100)
   email = models.CharField(max_length=100)
   phone_number = models.CharField(max_length=100)
-  status = models.BooleanField()
 
   def __str__(self):
     return self.full_name
