@@ -1,9 +1,8 @@
 from django.db import models
-from client.models import Client
 
 
 class Item(models.Model):
-    title = models.CharField(max_length=100)
+    title = models.CharField(unique=True, max_length=100)
     price = models.FloatField()
     category = models.CharField(max_length=100)
 
