@@ -9,18 +9,31 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('agent', '0001_initial'),
+        ("agent", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Client',
+            name="Client",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('full_name', models.CharField(max_length=100)),
-                ('phone_number', models.CharField(max_length=100)),
-                ('address', models.CharField(max_length=100)),
-                ('agent', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='agent.agent')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("full_name", models.CharField(max_length=100)),
+                ("phone_number", models.CharField(max_length=100)),
+                ("address", models.CharField(max_length=100)),
+                (
+                    "agent",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE, to="agent.agent"
+                    ),
+                ),
             ],
         ),
     ]
