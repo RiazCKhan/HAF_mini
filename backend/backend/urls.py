@@ -23,8 +23,6 @@ urlpatterns = [
     path("agent/", include("agent.urls")),
     path("client/", include("client.urls")),
     path("delivery/", include("delivery.urls")),
-    path("donation/", include("donation.urls")),
-    path("donor/", include("donor.urls")),
     path("referral/", include("referral.urls")),
     path("item/", include("item.urls")),
 ]
