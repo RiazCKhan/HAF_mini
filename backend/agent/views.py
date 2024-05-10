@@ -8,10 +8,10 @@ from .serializers import AgentSerializer
 
 class AgentList(generics.ListAPIView):
     queryset = Agent.objects.all()
-    serializer_class = AgentSerializer
 
     def list(self, request, *args, **kwargs):
-        serializer = self.get_serializer(self.queryset, many=True)
+        queryset = self.filter_queryset(self.get_queryset())
+        serializer = AgentSerializer(queryset, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 

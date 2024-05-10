@@ -8,12 +8,26 @@ from .serializers import ClientSerializer
 
 class ClientList(generics.ListAPIView):
     queryset = Client.objects.all()
-    serializer_class = ClientSerializer
+
+    def list(self, request, *args, **kwargs):
+        queryset = self.filter_queryset(self.get_queryset())
+        serializer = ClientSerializer(queryset, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
 
 class ClientCreate(generics.CreateAPIView):
     queryset = Client.objects.all()
     serializer_class = ClientSerializer
+
+    def create(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        self.perform_create(serializer)
+        headers = self.get_success_headers(serializer.data)
+
+        return Response(
+            serializer.data, status=status.HTTP_201_CREATED, headers=headers
+        )
 
 
 class ClientUpdate(generics.RetrieveUpdateAPIView):
