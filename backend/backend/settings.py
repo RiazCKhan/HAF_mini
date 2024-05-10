@@ -41,8 +41,6 @@ INSTALLED_APPS = [
     "agent",
     "client",
     "delivery",
-    "donation",
-    "donor",
     "referral",
     "item",
 ]
