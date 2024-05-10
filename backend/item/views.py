@@ -6,7 +6,7 @@ from .models import Item, Inventory
 from .serializers import ItemSerializer
 
 
-class AgentCreate(generics.CreateAPIView):
+class ItemCreate(generics.CreateAPIView):
     queryset = Item.objects.all()
     serializer_class = ItemSerializer
 
