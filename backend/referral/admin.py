@@ -8,11 +8,16 @@ class ReferralItemAdmin(admin.ModelAdmin):
         "quantity",
     )
 
+
 admin.site.register(ReferralItem, ReferralItemAdmin)
 
 
 class ReferralOrderAdmin(admin.ModelAdmin):
-    list_display = ("id", "client",)
+    list_display = (
+        "id",
+        "client",
+    )
+
 
 admin.site.register(ReferralOrder, ReferralOrderAdmin)
 
@@ -23,5 +28,6 @@ class ReferralAdmin(admin.ModelAdmin):
         "agent",
         "status",
     )
+
 
 admin.site.register(Referral, ReferralAdmin)
