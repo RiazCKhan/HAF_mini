@@ -9,6 +9,11 @@ class ItemSerializer(serializers.ModelSerializer):
 
 
 class InventorySerializer(serializers.ModelSerializer):
+    item = ItemSerializer(read_only=True)
+
     class Meta:
         model = Inventory
         fields = "__all__"
+
+
+
