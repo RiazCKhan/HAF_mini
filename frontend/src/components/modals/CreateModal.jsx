@@ -10,6 +10,7 @@ const CreateModal = (props) => {
   const modalFormFields = fields.map((field) => {
     return (
       <TextField
+        key={field.id}
         id="outlined-password-input"
         label={field.field}
         type={field.type}
