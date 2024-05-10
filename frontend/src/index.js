@@ -7,8 +7,6 @@ import AgentTable from './components/tables/AgentTable'
 import ReferralTable from './components/tables/ReferralTable'
 import ClientTable from './components/tables/ClientTable'
 import DeliveryTable from './components/tables/DeliveryTable'
-import DonationTable from './components/tables/DonationTable'
-import DonorTable from './components/tables/DonorTable';
 
 const router = createBrowserRouter([
   {
@@ -32,14 +30,6 @@ const router = createBrowserRouter([
         path: '/deliveries',
         element: <DeliveryTable />
       },
-      {
-        path: '/donations',
-        element: <DonationTable />
-      },
-      {
-        path: '/donors',
-        element: <DonorTable />
-      }
     ]
   }
 ])
