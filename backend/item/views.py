@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from rest_framework import generics, status
 
 from .models import Item, Inventory
-from .serializers import ItemSerializer, InventorySerializer
+from .serializers import ItemSerializer, ItemInfoSerializer, InventorySerializer, InventoryInfoSerializer
 
 
 class ItemList(generics.ListAPIView):
@@ -11,7 +11,7 @@ class ItemList(generics.ListAPIView):
 
     def list(self, request, *args, **kwargs):
         queryset = self.filter_queryset(self.get_queryset())
-        serializer = ItemSerializer(queryset, many=True)
+        serializer = ItemInfoSerializer(queryset, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
     
 
@@ -34,7 +34,7 @@ class InventoryList(generics.ListAPIView):
 
     def list(self, request, *args, **kwargs):
         queryset = self.filter_queryset(self.get_queryset())
-        serializer = InventorySerializer(queryset, many=True)
+        serializer = InventoryInfoSerializer(queryset, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
