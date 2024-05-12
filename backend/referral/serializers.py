@@ -20,6 +20,7 @@ class ReferralInfoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Referral
         fields = (
+            "id",
             "agent",
             "client",
             "status",
@@ -41,9 +42,35 @@ class ReferralSerializer(serializers.ModelSerializer):
             
     def create(self, validated_data):
         referral_items = validated_data.pop('items')
-        print('referral items', referral_items)
         referral = Referral.objects.create(**validated_data)
+
         for item in referral_items:
-            print('item in referral item', item)
             ReferralItem.objects.create(**item, referral=referral)
         return referral
+    
+
+    def update(self, instance, validated_data):
+        referral_items = validated_data.pop('items')
+        instance.status = validated_data.get("status", instance.status)
+        instance.save()
+
+        saved_items = []
+        for item in referral_items:
+            if "id" in item.keys():
+                if ReferralItem.objects.filter(id=item["id"]).exists():
+                    i = ReferralItem.objects.get(id=item["id"])
+                    i.item = item.get('item', i.item)
+                    i.quantity = item.get('quantity', i.quantity)
+                    i.save()
+                    saved_items.append(i.id)
+                else:
+                    continue
+            else:
+                i = ReferralItem.objects.create(**item, referral=instance)
+                saved_items.append(i.id)
+
+        for item in instance.items:
+            if item.id not in saved_items:
+                item.delete()
+
+        return instance
