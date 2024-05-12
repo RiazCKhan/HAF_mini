@@ -39,18 +39,17 @@ class ReferralSerializer(serializers.ModelSerializer):
             "status",
             "items",
         )
-            
+
     def create(self, validated_data):
-        referral_items = validated_data.pop('items')
+        referral_items = validated_data.pop("items")
         referral = Referral.objects.create(**validated_data)
 
         for item in referral_items:
             ReferralItem.objects.create(**item, referral=referral)
         return referral
-    
 
     def update(self, instance, validated_data):
-        referral_items = validated_data.pop('items')
+        referral_items = validated_data.pop("items")
         instance.status = validated_data.get("status", instance.status)
         instance.save()
 
@@ -59,8 +58,8 @@ class ReferralSerializer(serializers.ModelSerializer):
             if "id" in item.keys():
                 if ReferralItem.objects.filter(id=item["id"]).exists():
                     i = ReferralItem.objects.get(id=item["id"])
-                    i.item = item.get('item', i.item)
-                    i.quantity = item.get('quantity', i.quantity)
+                    i.item = item.get("item", i.item)
+                    i.quantity = item.get("quantity", i.quantity)
                     i.save()
                     saved_items.append(i.id)
                 else:
