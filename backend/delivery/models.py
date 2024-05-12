@@ -12,7 +12,7 @@ STATUS_CHOICES = (
 
 
 class Delivery(models.Model):
-    referral = models.ForeignKey(Referral, on_delete=models.CASCADE)
+    referral = models.ForeignKey(Referral, on_delete=models.CASCADE, blank=True, null=True)
     status = models.CharField(
         max_length=10, choices=STATUS_CHOICES, blank=True, null=True
     )
